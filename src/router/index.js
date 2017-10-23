@@ -3,8 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
-
-export default new Router({
+const Routers = {
   routes: [
     {
       path: '/',
@@ -12,4 +11,10 @@ export default new Router({
       component: HelloWorld
     }
   ]
-})
+}
+const RouterConfig = {
+  linkActiveClass: 'active',
+  mode: 'history',
+  routes: Routers
+}
+export default new Router(RouterConfig)
